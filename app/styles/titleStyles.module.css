@@ -1,0 +1,13 @@
+.title {
+	display: inline;
+	background: -webkit-linear-gradient(0deg, #ffffff 0%, #ff5100 70%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.subTitle {
+	display: block;
+	background: -webkit-linear-gradient(0deg, #ffffff 0%, #ff5100 70%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

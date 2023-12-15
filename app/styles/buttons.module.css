@@ -1,0 +1,135 @@
+.navItem {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.navItem::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: rgb(255, 255, 255, 0.5);
+	transition: width 0.3s ease-in-out;
+	display: block;
+}
+
+.navItem:hover::after {
+	width: 100%;
+}
+
+@media screen and (min-width: 375px) and (max-width: 768px) {
+	.navItem.active {
+	  color: black; /* Ваш цвет для этого диапазона */
+	}
+  }
+  
+  @media screen and (min-width: 769px) {
+	.navItem.active {
+	  color: rgba(255, 255, 255, 0.5); /* Ваш цвет для этого диапазона */
+	}
+  }
+  
+
+.navItem.active::after {
+	width: 100%;
+	background-color: rgb(255, 255, 255, 0.5);
+}
+
+a.linkstyle {
+	padding: 15px 20px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 14px;
+	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+a.linkstyle span:nth-child(1) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to right, #0c002b, #1779ff);
+}
+
+@keyframes animate1 {
+	0% {
+		transform: translate(-100%);
+	}
+	100% {
+		transform: translate(100%);
+	}
+}
+
+a.linkstyle:hover span:nth-child(1) {
+	animation: animate1 1s linear infinite;
+  }
+
+a.linkstyle span:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(to bottom, #0c002b, #1779ff);
+}
+
+@keyframes animate2 {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+a.linkstyle:hover span:nth-child(2) {
+	animation: animate2 1s linear infinite;
+  }
+
+a.linkstyle span:nth-child(3) {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(to left, #0c002b, #1779ff);
+}
+
+@keyframes animate3 {
+	100% {
+		transform: translate(-100%);
+	}
+	0% {
+		transform: translate(100%);
+	}
+}
+
+a.linkstyle:hover span:nth-child(3) {
+	animation: animate3 1s linear infinite;
+  }
+
+a.linkstyle span:nth-child(4) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(to top, #0c002b, #1779ff);
+}
+
+@keyframes animate4 {
+	100% {
+		transform: translateY(-100%);
+	}
+	0% {
+		transform: translateY(100%);
+	}
+}
+
+a.linkstyle:hover span:nth-child(4) {
+	animation: animate4 1s linear infinite;
+  }
