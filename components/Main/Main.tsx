@@ -3,7 +3,13 @@ import titleStyles from "../../app/styles/titleStyles.module.css";
 import btnStyles from "../../app/styles/buttons.module.css";
 import glass from "../../app/styles/glass.module.css";
 
-const GlassItem = ({ title, number, description }) => (
+interface GlassItemProps {
+  title: string;
+  number: string;
+  description: string;
+}
+
+const GlassItem: React.FC<GlassItemProps> = ({ title, number, description }) => (
   <div className={`flex flex-col sm:items-center sm:justify-center  md:justify-start ${glass.background} ${glass.backgroundline} relative cursor-pointer mb-40`}>
     <span>{title}</span>
     <span className="sm:text-40 lg:text-60">{number}</span>
@@ -11,14 +17,14 @@ const GlassItem = ({ title, number, description }) => (
   </div>
 );
 
-const cardContents = [
+const cardContents: GlassItemProps[] = [
   { title: 'мы', number: '1', description: 'на рынке' },
   { title: 'календарик за', number: '2001', description: 'год в подарок' },
   { title: 'гарантируем', number: '50%', description: 'безопасность' },
   { title: 'путешествие', number: '597', description: 'дней' }
 ];
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
     <div className="sm:text-center md:text-left md:flex md:justify-between">
       <div>
