@@ -2,23 +2,30 @@
 	width: 160px;
 	height: 160px;
 	background: linear-gradient(
-		to top left,
-		rgba(255, 255, 255, 0.08),
-		rgba(255, 255, 255, 0.02)
+		rgba(0, 0, 255, 0.03),
 	);
 }
+
+@media screen and (min-width: 1170px) {
+	.background {
+		width: 190px;
+		height: 190px;
+		background: linear-gradient(
+			rgba(0, 0, 255, 0.03)
+		);
+	}
+}
+
 
 .background:hover {
-	width: 160px;
-	height: 160px;
 	background: linear-gradient(
-		to right bottom,
-		rgba(255, 255, 255, 0.08),
-		rgba(255, 255, 255, 0.02)
+		to bottom right,
+		rgba(0, 0, 255, 0.03),
+		rgba(255, 255, 255, 0.065)
 	);
 }
 
-.backgroundline::after {
+.backgroundline:hover::after {
 	content: "";
 	position: absolute;
 	bottom: 0;
@@ -32,7 +39,8 @@
 	);
 }
 
-.backgroundline::before {
+
+.backgroundline:hover::before {
 	content: "";
 	position: absolute;
 	right: 0;

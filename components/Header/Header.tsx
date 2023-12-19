@@ -21,11 +21,11 @@ const links: NavigationLinkProps[] = [
 
 const Header: React.FC = () => {
 	return (
-		<div className="sm:flex sm:justify-between sm:items-center md:flex-col lg:flex-row">
+		<div className="sm:flex sm:justify-between sm:items-center md:flex-col lg:flex-row pt-24 pb-40">
 			<Image
 				src={logo}
 				alt="logo"
-				className="sm:w-150 md:w-200 lg:w-312 pt-24 pb-40"
+				className="sm:w-150 md:w-200 lg:w-312"
 			/>
 			<BurgerMenu>
 				<ul className="flex flex-col text-25 font-Museo text-black font-medium leading-22 items-center">

@@ -7,10 +7,11 @@ interface GlassItemProps {
   title: string;
   number: string;
   description: string;
+  isLast?: boolean;
 }
 
-const GlassItem: React.FC<GlassItemProps> = ({ title, number, description }) => (
-  <div className={`flex flex-col sm:items-center sm:justify-center  md:justify-start ${glass.background} ${glass.backgroundline} relative cursor-pointer mb-40`}>
+const GlassItem: React.FC<GlassItemProps> = ({ title, number, description, isLast }) => (
+  <div className={`flex flex-col sm:items-center sm:justify-center  md:justify-start lg:justify-center ${glass.background} ${glass.backgroundline} relative cursor-pointer ${!isLast ? "mb-10" : ""}`}>
     <span>{title}</span>
     <span className="sm:text-40 lg:text-60">{number}</span>
     <span>{description}</span>
@@ -19,15 +20,15 @@ const GlassItem: React.FC<GlassItemProps> = ({ title, number, description }) => 
 
 const cardContents: GlassItemProps[] = [
   { title: 'мы', number: '1', description: 'на рынке' },
-  { title: 'календарик за', number: '2001', description: 'год в подарок' },
+  { title: 'календарик за', number: '2001', description: 'год в подарок', isLast: true, },
   { title: 'гарантируем', number: '50%', description: 'безопасность' },
-  { title: 'путешествие', number: '597', description: 'дней' }
+  { title: 'путешествие', number: '597', description: 'дней', isLast: true }
 ];
 
 export const Main: React.FC = () => {
   return (
     <div className="sm:text-center md:text-left md:flex md:justify-between">
-      <div>
+      <div className="lg:pt-60">
         <h1 className={`${titleStyles.title} sm:text-40 md:text-40 lg:text-58 font-bold leading-22`}>
           ПУТЕШЕСТВИЕ
         </h1>
@@ -44,8 +45,8 @@ export const Main: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="flex sm:justify-center  text-white text-16 mb-180">
-        <div className="sm:flex sm:flex-col md:block sm:mr-15 md:mr-40 lg:mr-50">
+      <div className="flex sm:justify-center text-white text-18 leading-22">
+        <div className="sm:flex sm:flex-col md:block sm:mr-15 md:mr-40 lg:mr-10 lg:justify-center">
           {cardContents.slice(0, 2).map((item, index) => (
             <GlassItem key={index} {...item} />
           ))}
