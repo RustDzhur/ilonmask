@@ -45,7 +45,7 @@ export const Main: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className="flex sm:justify-center text-white text-18 leading-22">
+      <div className="flex sm:justify-center text-white text-18 leading-22 pb-180">
         <div className="sm:flex sm:flex-col md:block sm:mr-15 md:mr-40 lg:mr-10 lg:justify-center">
           {cardContents.slice(0, 2).map((item, index) => (
             <GlassItem key={index} {...item} />
