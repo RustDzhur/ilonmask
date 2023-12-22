@@ -23,13 +23,13 @@
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
 	.navItem.active {
-	  color: black; /* Ваш цвет для этого диапазона */
+	  color: black;
 	}
   }
   
   @media screen and (min-width: 769px) {
 	.navItem.active {
-	  color: rgba(255, 255, 255, 0.5); /* Ваш цвет для этого диапазона */
+	  color: rgba(255, 255, 255, 0.5);
 	}
   }
   
